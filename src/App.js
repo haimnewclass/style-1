@@ -1,24 +1,24 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { useState } from 'react';
 
 function App() {
+const   [state,SetState]=useState(true);
+const   [stateCl,SetStateCl]=useState('bbb');
+let  aa="aaa";
+const  bb="bbb";
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+     <div className={` ${stateCl}`} onClick={()=>{
+       SetState(!state);
+       if(state)
+       {
+        SetStateCl('bbb')
+       }else
+       SetStateCl('aaa')
+       console.log(state);
+     }}>Haim</div>
+    {state?`TRUE${aa}`:"FALSE"} </div>
   );
 }
 

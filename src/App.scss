@@ -1,3 +1,5 @@
+$mainColor:purple;
+$mainColor1:blue;
 .App {
   text-align: center;
 }
@@ -5,6 +7,25 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.aaa{
+  background-color: $mainColor;
+}
+
+@mixin ddd($wid){
+  width:$wid;
+  display: block;
+  background-color: $mainColor1;
+}
+
+ .bbb{
+  @include ddd(20px);
+  background-color: $mainColor1;
+}
+.ccc{
+  width:400px;
+  display: block;
 }
 
 @media (prefers-reduced-motion: no-preference) {
